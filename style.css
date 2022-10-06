@@ -1,0 +1,481 @@
+:root{
+    --main-color:#607d8b;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 91%;
+    width: 101%;
+}
+.container{
+    margin: 0px auto;
+}
+
+@media (min-width:576px){ /*small screen =phone*/
+    .container{
+        max-width: 540px;
+            }
+    }
+    @media (min-width:768px){ /*medium screen =tablet*/
+        .container{
+            max-width: 720px;
+            }
+    }
+    @media (min-width:992px){/* desktop screen*/
+        .container{
+            max-width: 950px;
+        }
+    }
+    @media (min-width:1200px){/*large screen*/
+        .container{
+            max-width:1040px;
+        }
+    }
+    .center{
+    padding: 20px 50px !important;
+    margin: 0px auto 20px;
+    display: grid;
+    align-items: center;
+    transition: 1s 1ms ease-in-out;
+    }
+.form{
+    padding: 20px 50px !important;
+    margin: 0px auto 20px;
+    display: grid;
+    grid-template-columns: 50% 48%;
+    grid-column-gap: 2%;
+    align-items: center;
+    transition: 1s 1ms ease-in-out;
+}
+.login{
+    position: absolute;
+    top: 20%;
+    opacity: 0;
+    transform: translateX(-1400px);
+}
+.form h2{
+text-align: left;
+margin: 0px auto 15px;
+font-size: 40px;
+color: var(--main-color);
+font-weight: 700;
+max-width: 500px;
+text-align: left;
+padding-left: 10px;
+}
+.form .sign-in,
+.form .sign-up{
+    max-width: 600PX;
+    margin: 0 20px;
+    text-align: center;
+}
+.sign-in{
+background: #fff;
+padding: 20px;
+position: relative;
+border-radius: 7px;
+}
+.sign-in::before{
+    content: "";
+    display: block;
+    background-image: linear-gradient(-45deg ,#607d8b, #acacac,#fff);
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    top:50% ;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+border-radius: 7px;
+}
+.form .input-field{
+    max-width: 500px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding:0 0.5rem;
+    margin:0 auto 20px;
+    width: 100%;
+}
+.form .input-field i{
+        text-align: center;
+        line-height: 50px;
+        color: #acacac;
+}
+.form .input-field input{
+        border: none;
+        outline: none;
+        background:none;
+        line-height: 1;
+        color:var(--main-color);
+        font-size: 16px;
+        font-weight: 400;
+}
+.form .input-field input::placeholder{
+    color: #acacac;
+}
+.form .select-input{
+    display: flex;
+    text-align: left;
+    padding: 10px 30px;
+    
+}
+.sign-in img{
+    max-width: 50% !important;
+}
+.select-input label{
+    color: #acacac;
+    font-weight: 400;
+    margin-right: 20px;
+    flex: 1;
+}
+.select{
+    border: none;
+    width: 100%;
+    background: none;
+    outline: none;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 400;
+    color:var(--main-color);
+    text-align: left;
+    flex: 1;
+}
+
+.input-field .select option{
+    background:#fff;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+/* .input-field .select option>span{
+    background-color: var(--main-color);
+} */
+form input[type='submit']:hover{
+   transform: scale(1.05);
+}
+.input-field.focus{
+border:3px solid var(--main-color) !important;
+}
+.input-field.focus input{
+    color: var(--main-color);
+}
+.input-field.focus i{
+    color: var(--main-color);
+}
+.form input[type='submit']{
+    width: 150px;
+    border: none;
+    height: 45px;
+    border-radius: 45px;
+    outline: none;
+    background-color: var(--main-color);
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 10px auto;
+    font-weight: 500;
+    display: block;
+}
+.form .switch{
+    font-size: 12px;
+    cursor: pointer;
+    margin: 10px auto;
+    color: #acacac;
+    text-decoration: underline;
+}
+.form .wrong-msg{
+    font-size: 13px;
+    color: #f44336;
+}
+.border-div{
+    background-color: var(--main-color);
+    position: relative;
+}
+.form img{
+   max-width: 80%;
+    transition: 1s 1ms ease-in-out;
+}
+.sign-up .input-field{
+    background:none;
+    border: 2px solid #f0f0f0;
+}
+.registr{
+    position: absolute;
+    top: 20%;
+    opacity: 0;
+    transform: translateX(+1400px);
+}
+/* student page */
+.nav-bar{
+    border-bottom:2px solid var(--main-color);
+    width:90%;
+    height: 70px;
+    margin:10px auto 50px;
+    display: flex;
+ align-items: center;
+
+}
+.nav-bar h1{
+    color: var(--main-color);
+    flex: 2;
+    margin: 0px;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+.nav-bar h1>span{
+    font-size: 40px;
+    font-family: initial;
+    text-transform: capitalize ;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: var(--main-color) ;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 15px;
+}
+.nav-bar a.active{
+ transition: 0.5s;
+border-bottom: 3px solid var(--main-color);
+}
+.nav-bar .links .logout{
+    background: none;
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+    border-radius: 50px;
+    padding: 6px 14px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.nav-bar .links .logout:hover{
+   background: var(--main-color);
+   color: #fff ;
+   transition: 0.6s;
+}
+/*send request page*/
+.send-content{
+    max-width: 600px;
+    width: 100%;
+    margin: 0px auto;
+}
+.send-content h2 {
+    color: #acacac;
+    font-weight: 600;
+}
+.send-content .request-title{
+display: flex;
+}
+.send-content label{
+    color: #acacac;
+    font-weight: 400;
+}
+.send-content select{
+    width: 40%;
+    margin-bottom: 20px;
+    flex: 2;
+    margin-left: 10px;
+    border: 1px var(--main-color) solid;
+    color: var(--main-color);
+    outline: none;
+    padding: 5px 10px;
+    font-weight: 500;
+}
+.send-content select option{
+    background:#fff;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.send-content form textarea{
+    width: 100%;
+    border: 1px var(--main-color) solid;
+    outline: none;
+    padding: 10px;
+    color: #333;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.send-content form textarea::placeholder{
+    color:#acacac;
+
+}
+.send-content form  button{
+    width: 100px;
+    display: block;
+    background-color:#009688 ;
+    margin: 10px auto;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
+/*student profile page*/
+.profile-content{
+    max-width: 600px;
+    width: 100%;
+    margin: 10px auto;
+}
+.profile-content .info-field{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.profile-content .info-field label{
+    flex: 1;
+    color: #acacac;
+}
+.profile-content .info-field input{
+    border: rgb(172, 172, 172,.6) 1px solid;
+    color: var(--main-color);
+    font-weight: 600;
+    padding:5px 10px;
+    flex: 3;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+}
+.profile-content .select-info select{
+border: 1px solid #acacac;
+flex:3;
+padding: 5px 10px;
+border-radius: 5px;
+font-size: 18px;
+color: var(--main-color);
+font-weight: 600;
+}
+.profile-content form  button{
+    width: 100px;
+    background-color:#009688 ;
+    margin-top: 50px ;
+    margin-right: 25px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+.success-msg{
+    color: rgb(27, 161, 27);
+    font-size: 13px;
+}
+/* employes pages */
+.finish,
+.undo,
+.remove{
+    text-align: center;
+    font-size: 24px;
+  
+}
+.finish button{
+    border: none;
+    background:none;
+    color: rgb(27, 161, 27);
+}
+.finish .reject{
+    color: red !important;
+}
+.undo button{
+    border: none;
+    background:none;
+    color: blue;
+}
+.remove button{
+    border: none;
+    background:none;
+    color: red;
+}
+/* admin page */
+.employees{
+    margin: 50px;
+}
+.employees h2{
+    color: #acacac;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.employees .input-field{
+    max-width: 500px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding:0 0.5rem;
+    margin:0 auto 20px;
+    width: 100%;
+    align-items: center;
+}
+.employees .input-field i{
+    text-align: center;
+    line-height: 50px;
+    color: #acacac;
+}
+.employees .input-field input{
+    border: none;
+    outline: none;
+    background:none;
+    line-height: 1;
+    color:var(--main-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+.employees .input-field input::placeholder{
+color: #acacac;
+}
+.employees input[type='submit']{
+    width: 150px;
+    border: none;
+    height: 45px;
+    border-radius: 45px;
+    outline: none;
+    background-color: var(--main-color);
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 10px auto;
+    font-weight: 500;
+    display: block;
+}
+.role h2, .myrequest{
+margin-bottom: 30px;
+font-size: 30px;
+color: #acacac;
+font-weight: 700;
+max-width: 500px;
+text-align: left;
+padding-left: 10px;
+}
+
+@media (max-width:768px){
+.form{
+    display: block;
+    text-align: center;
+    padding: 0px !important;
+    margin: 0px;
+}
+.form h2{
+  font-size: 20px;
+}
+.form img{
+    display: none;
+    }
+}
